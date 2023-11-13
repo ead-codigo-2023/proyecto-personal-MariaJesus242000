@@ -1,63 +1,52 @@
 nav {
     background-color: var(--orange) !important;
-} 
-    
- .conservas {
-    min-height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--homeSectionPadding);
 }
 
-.conservas .text_container {
-    width: 80%;
+.content .title p {
+    padding: unset;
+    padding-left: 20px;
+    padding-bottom: 10px;
 }
 
-.conservas .green_title {
+.content .title h1 {
+    color: black;
+}
+
+.content .title h2 {
     color: var(--titleGreen);
-    font-size: 2rem;
-    min-width: 100%;
-    text-align: left;    
+    font-size: 1.2rem;
+    padding: 10px 20px;
 }
 
-.text_right {
-    padding-left: 10rem;
-    padding-top: 20px;
-    text-align: justify;
+.content .split_div {
+    max-height: 60vh;
+    margin: 40px 0;
 }
 
-.picture-glass {
-    justify-content: left;
-    padding-left: 5px;
-    display: flex;
-    flex-direction: column;
+.content .split_div  img {
+    max-height: 50vh;
 }
 
-.picture-glass img {
-    width: 20%;
-    height: 20%;
-    margin: 5px;
-    object-fit: cover;
-    width: 416px;
-    height: 725px;
-    flex-shrink: 0;
+.content .split_div div h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
 }
 
-.picture-tin {
-    justify-content: right;
-    padding-right: 5px;
-    display: flex;
-    flex-direction: column;
+.content .split_div div p {
+    color: var(--orange);
 }
 
-.picture-tin img {
-    width: 20%;
-    height: 20%;
-    margin: 5px;
-    object-fit: unset;
-    width: 449px;
-    height: 789px;
-    flex-shrink: 0;
+@media screen and (max-width: 768px) {
+
+    nav {
+        background-color: rgba(255, 153, 60, 0.6) !important;
+    }
+
+    .content {
+        margin-top: 45px;
+    }
+
+    .content .split_div {
+        max-height: unset;
+    }
 }

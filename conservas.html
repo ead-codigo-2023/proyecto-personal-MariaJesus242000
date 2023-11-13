@@ -1,41 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-        <title>AGRO OCOA - Conservas</title>
+        <title>AGRO OCOA - Inicio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/products.css">
-
+        <link rel="stylesheet" href="style/conservas.css">
     </head>
     <body>
 
-        <nav>
+        <nav class="desktop">
             <ul>
-                <li><a href="/inicio">INICIO</a></li>
-                <li><a href="/servicios">SERVICIOS</a></li>
-                <li><a href="/">PRODUCTOS</a></li>
-                <li><a href="/nosotros">SOBRE NOSOTROS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/">INICIO</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
+                <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
-        <section class="products">
-            <div class="text_container">
-                <h1 class="green_title">CONSERVA</h1>
-                <p class="text_right">
-                    Chile experimenta por primera vez el placer de los nísperos en almíbar, una innovación exquisita y sana perfecta para postres
-                </p>
+        <nav class="mobile">
+            <button type="button" id="menu-button">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="/">INICIO</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
+                <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <section class="content">
+            <div class="title">
+                <h1>CONSERVA</h1>
+                <h2>NÍSPERO</h2>
+                <p>Chile experimenta por primera vez el placer de los nísperos en almíbar, una innovación exquisita y sana perfecta para postres</p>
             </div>
-        </section>
 
-        <div class="picture-glass">
-          <img src="./static/static conservas/Conserva1.jpg" alt="Imagen conserva vidrio.">
-        </div>
-
-        <div class="picture-tin">
-                    <img src="./static/static conservas/Conserva2.jpg" alt="Imagen conserva lata.">
-        </div>
-
+            <div class="split_div">
+                <div>
+                    <img src="./static/conserva/vidrio.png" alt="Limones en caja de madera.">
+                    <h3>Vidrio</h3>
+                    <p>1kg</p>
+                </div>
+                <div>
+                    <img src="./static/conserva/lata.png" alt="Limones en caja de madera.">
+                    <h3>Lata</h3>
+                    <p>600gr</p>
+                </div>
+            </div>
         </section>
 
         <footer>
@@ -68,6 +81,15 @@
                 </di>
             </div>
         </footer>
-
+        <script>
+            document.getElementById('menu-button').addEventListener('click', function() {
+                var navLinks = document.getElementById('nav-links');
+                if (navLinks.classList.contains('nav-links'))
+                    navLinks.className = 'nav-links_opened';
+                else {
+                    navLinks.className = 'nav-links';
+                }
+            });
+        </script>
     </body>
 </html>
