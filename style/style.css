@@ -39,10 +39,11 @@ nav {
 }
 
 nav ul {
-    padding-top: 20px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100%;
     list-style: none;
 }
 
@@ -150,7 +151,7 @@ footer h3 {
     padding: 0;
 }
 
-.mobile button:focus + .nav-links {
+.mobile .nav-links_opened {
     display: flex;
     flex-direction: column;
     justify-content: space-around;

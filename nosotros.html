@@ -11,27 +11,27 @@
         <nav class="desktop">
             <ul>
                 <li><a href="/">INICIO</a></li>
-                <li><a href="/servicios">SERVICIOS</a></li>
-                <li><a href="/frutas.html">PRODUCTOS</a></li>
-                <li><a href="/ellos">SOBRE NOSOTROS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
+                <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
         <nav class="mobile">
-            <button>&#9776;</button>
-            <ul class="nav-links">
+            <button type="button" id="menu-button">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="/">INICIO</a></li>
-                <li><a href="/servicios">SERVICIOS</a></li>
-                <li><a href="/frutas.html">PRODUCTOS</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
                 <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
         <section class="header">
             <div class="image">
-                <img src="./static/static sobre_nosotros/Sobrenosotros.jpg" alt="Imagen de Palma Chilena.">
+                <img src="./static/sobre_nosotros/landing.png" alt="Imagen de Palma Chilena.">
             </div>
             <div class="split_div" id="intro">
                 <div>
@@ -54,7 +54,7 @@
 
         <section class="split_div">
             <div>
-                <img src="./static/static sobre_nosotros/Metas.png" alt="Imagen de paneles solares.">
+                <img src="./static/sobre_nosotros/paneles.png" alt="Imagen de paneles solares.">
             </div>
             <div class="split_div_text">
                 <h3>METAS</h3>
@@ -68,13 +68,13 @@
                 <p>Trascender fronteras, llevando la mejor calidad de fruta no solo a nivel nacional, sino también más allá de nuestras fronteras. En Agro Ocoa, nos enorgullecemos de ofrecer servicios de packing que aseguran que cada fruto sea tratado con el cuidado que merece.</p>
             </div>
             <div>
-                <img src="./static/static sobre_nosotros/Vision.png" alt="Imagen Camión.">
+                <img src="./static/sobre_nosotros/camion.png" alt="Imagen de paneles solares.">
             </div>
         </section>
 
         <section class="split_div">
             <div>
-                <img src="./static/static sobre_nosotros/Compromiso.png" alt="Imagen final.">
+                <img src="./static/sobre_nosotros/caja.png" alt="Imagen de paneles solares.">
             </div>
             <div class="split_div_text">
                 <h3>COMPROMISO</h3>
@@ -112,5 +112,15 @@
                 </di>
             </div>
         </footer>
+        <script>
+            document.getElementById('menu-button').addEventListener('click', function() {
+                var navLinks = document.getElementById('nav-links');
+                if (navLinks.classList.contains('nav-links'))
+                    navLinks.className = 'nav-links_opened';
+                else {
+                    navLinks.className = 'nav-links';
+                }
+            });
+        </script>
     </body>
 </html>

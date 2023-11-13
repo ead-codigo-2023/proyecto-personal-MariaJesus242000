@@ -11,26 +11,26 @@
         <nav class="desktop">
             <ul>
                 <li><a href="/">INICIO</a></li>
-                <li><a href="/servicios">SERVICIOS</a></li>
-                <li><a href="/frutas.html">PRODUCTOS</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
                 <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
         <nav class="mobile">
-            <button>&#9776;</button>
-            <ul class="nav-links">
+            <button type="button" id="menu-button">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="/">INICIO</a></li>
-                <li><a href="/servicios">SERVICIOS</a></li>
-                <li><a href="/frutas.html">PRODUCTOS</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
                 <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
         <section class="header">
-            <img src="./static/static products/Productos.png" alt="Imagen de árbol de limón.">
+            <img src="./static/products/landing.png" alt="Imagen de árbol de limón.">
         </section>
 
         <section class="content">
@@ -41,11 +41,11 @@
 
             <div class="split_div">
                 <div>
-                    <img src="./static/static products/Frutas.jpg" alt="Limones en caja de madera.">
+                    <img src="./static/products/frutas.png" alt="Limones en caja de madera.">
                     <a href="frutas.html">FRUTAS</a>
                 </div>
                 <div>
-                    <img src="./static/static products/Conservas.jpg" alt="Limones en caja de madera.">
+                    <img src="./static/products/conservas.png" alt="Limones en caja de madera.">
                     <a href="conservas.html">CONSERVAS</a>
                 </div>
             </div>
@@ -81,5 +81,15 @@
                 </di>
             </div>
         </footer>
+        <script>
+            document.getElementById('menu-button').addEventListener('click', function() {
+                var navLinks = document.getElementById('nav-links');
+                if (navLinks.classList.contains('nav-links'))
+                    navLinks.className = 'nav-links_opened';
+                else {
+                    navLinks.className = 'nav-links';
+                }
+            });
+        </script>
     </body>
 </html>

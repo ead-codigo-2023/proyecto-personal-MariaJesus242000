@@ -11,26 +11,26 @@
         <nav class="desktop">
             <ul>
                 <li><a href="/">INICIO</a></li>
-                <li><a href="/servicios">SERVICIOS</a></li>
-                <li><a href="/productos">PRODUCTOS</a></li>
-                <li><a href="/nosotros">SOBRE NOSOTROS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
+                <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
         <nav class="mobile">
-            <button>&#9776;</button>
-            <ul class="nav-links">
+            <button type="button" id="menu-button">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="/">INICIO</a></li>
-                <li><a href="/servicios">SERVICIOS</a></li>
-                <li><a href="/productos">PRODUCTOS</a></li>
-                <li><a href="/nosotros">SOBRE NOSOTROS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
+                <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
         <section class="header">
-            <img src="./static/static home/landing.png" alt="Imagen aérea de Hacienda las Palmas de Ocoa.">
+            <img src="./static/home/landing.png" alt="Imagen aérea de Hacienda las Palmas de Ocoa.">
             <div class="landing_title">
                 <h1>AGRO OCOA</h1>
                 <h3>Desde 1980</h3>
@@ -48,7 +48,7 @@
 
         <section class="picture-card_container" id="first_banner">
             <div>
-                <img src="./static/static home/limones.png" alt="Imagen de limones.">
+                <img src="./static/home/limones.png" alt="Imagen de limones.">
                 <div class="home_card" id="lemon">
                     <h1>CALIDAD</h1>
                     <p>Nos esforzamos al máximo para ofrecer la mejor fruta a los chilenos con una calidad excepcional</p>
@@ -58,7 +58,7 @@
 
         <section class="picture-card_container">
             <div>
-                <img src="./static/static home/orange.png" alt="Imagen de naranjas.">
+                <img src="./static/home/orange.png" alt="Imagen de naranjas.">
                 <div class="home_card" id="orange">
                     <h1>SELECCIÓN</h1>
                     <p>Cuidamos de llevar a cabo un minucioso proceso de selección</p>
@@ -68,7 +68,7 @@
 
         <section class="picture-card_container">
             <div>
-                <img src="./static/static home/nisperos.png" alt="Imagen de nísperos.">
+                <img src="./static/home/nisperos.png" alt="Imagen de nísperos.">
                 <div class="home_card" id="nispero">
                     <h1>COMPROMISO</h1>
                     <p>Estamos comprometidos con la innovación y la sostenibilidad en cada paso que damos</p>
@@ -78,7 +78,7 @@
 
         <section class="picture-card_container" id="last">
             <div>
-                <img src="./static/static home/pomelos.png" alt="Imagen de pomelos.">
+                <img src="./static/home/pomelos.png" alt="Imagen de nísperos.">
                 <div class="home_card" id="pomelo">
                     <h1>ÚNICO</h1>
                     <p>Entorno único, unimos la reforestación de palmas chilenas y árboles nativos con una agricultura responsable, cuidando y preservando nuestro entorno con dedicación</p>
@@ -89,16 +89,16 @@
         <section class="bottom_links">
             <ul>
                 <li>
-                    <a href="">SERVICIOS</a>
+                    <a href="/servicios.html">SERVICIOS</a>
                 </li>
                 <li>
-                    <a href="">PRODUCTOS</a>
+                    <a href="/products.html">PRODUCTOS</a>
                 </li>
                 <li>
-                    <a href="">SOBRE NOSOTROS</a>
+                    <a href="/nosotros.html">SOBRE NOSOTROS</a>
                 </li>
                 <li>
-                    <a href="">CONTACTO</a>
+                    <a href="/contacto.html">CONTACTO</a>
                 </li>
             </ul>            
         </section>
@@ -133,6 +133,15 @@
                 </di>
             </div>
         </footer>
-
+        <script>
+            document.getElementById('menu-button').addEventListener('click', function() {
+                var navLinks = document.getElementById('nav-links');
+                if (navLinks.classList.contains('nav-links'))
+                    navLinks.className = 'nav-links_opened';
+                else {
+                    navLinks.className = 'nav-links';
+                }
+            });
+        </script>
     </body>
 </html>

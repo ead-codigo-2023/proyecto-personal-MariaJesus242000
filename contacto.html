@@ -14,21 +14,21 @@
             <nav class="desktop">
                 <ul>
                     <li><a href="/">INICIO</a></li>
-                    <li><a href="/servicios">SERVICIOS</a></li>
-                    <li><a href="/frutas.html">PRODUCTOS</a></li>
-                    <li><a href="/nosotros">SOBRE NOSOTROS</a></li>
-                    <li><a href="/contacto">CONTACTO</a></li>
+                    <li><a href="/servicios.html">SERVICIOS</a></li>
+                    <li><a href="/products.html">PRODUCTOS</a></li>
+                    <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li><a href="/contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
     
             <nav class="mobile">
-                <button>&#9776;</button>
-                <ul class="nav-links">
+                <button type="button" id="menu-button">&#9776;</button>
+                <ul class="nav-links" id="nav-links">
                     <li><a href="/">INICIO</a></li>
-                    <li><a href="/servicios">SERVICIOS</a></li>
-                    <li><a href="/productos">PRODUCTOS</a></li>
-                    <li><a href="/nosotros">SOBRE NOSOTROS</a></li>
-                    <li><a href="/contacto">CONTACTO</a></li>
+                    <li><a href="/servicios.html">SERVICIOS</a></li>
+                    <li><a href="/products.html">PRODUCTOS</a></li>
+                    <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li><a href="/contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
 
@@ -84,6 +84,15 @@
                 </di>
             </div>
         </footer>
-
+        <script>
+            document.getElementById('menu-button').addEventListener('click', function() {
+                var navLinks = document.getElementById('nav-links');
+                if (navLinks.classList.contains('nav-links'))
+                    navLinks.className = 'nav-links_opened';
+                else {
+                    navLinks.className = 'nav-links';
+                }
+            });
+        </script>
     </body>
 </html>

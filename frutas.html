@@ -12,21 +12,21 @@
         <nav class="desktop">
             <ul>
                 <li><a href="/">INICIO</a></li>
-                <li><a href="/servicios">SERVICIOS</a></li>
-                <li><a href="/frutas.html">PRODUCTOS</a></li>
-                <li><a href="/nosotros">SOBRE NOSOTROS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
+                <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
         <nav class="mobile">
-            <button>&#9776;</button>
-            <ul class="nav-links">
+            <button type="button" id="menu-button">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="/">INICIO</a></li>
-                <li><a href="/servicios">SERVICIOS</a></li>
-                <li><a href="/productos">PRODUCTOS</a></li>
-                <li><a href="/nosotros">SOBRE NOSOTROS</a></li>
-                <li><a href="/contacto">CONTACTO</a></li>
+                <li><a href="/servicios.html">SERVICIOS</a></li>
+                <li><a href="/products.html">PRODUCTOS</a></li>
+                <li><a href="/nosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="/contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
 
@@ -39,7 +39,7 @@
             <section class="fruits">
                 <div class="split_div">
                     <div class="image">
-                        <img src="./static/static frutas/naranja.png" alt="Imagen de naranjas.">
+                        <img src="./static/frutas/naranja.png" alt="Imagen de naranjas.">
                     </div>
                     <div class="details">
                         <div>
@@ -52,7 +52,7 @@
 
                 <div class="split_div">
                     <div class="image">
-                        <img src="./static/static frutas/limon.png" alt="Imagen de limón partido.">
+                        <img src="./static/frutas/limon.png" alt="Imagen de limón partido.">
                     </div>
                     <div class="details">
                         <div>
@@ -65,7 +65,7 @@
 
                 <div class="split_div">
                     <div class="image">
-                        <img src="./static/static frutas/pomelo.png" alt="Imagen de pomelo partido.">
+                        <img src="./static/frutas/pomelo.png" alt="Imagen de pomelo partido.">
                     </div>
                     <div class="details">
                         <div>
@@ -78,7 +78,7 @@
 
                 <div class="split_div">
                     <div class="image">
-                        <img src="./static/static frutas/nispero.png" alt="Imagen de racimo de níspero.">
+                        <img src="./static/frutas/nispero.png" alt="Imagen de racimo de níspero.">
                     </div>
                     <div class="details">
                         <div>
@@ -121,5 +121,15 @@
                 </di>
             </div>
         </footer>
+        <script>
+            document.getElementById('menu-button').addEventListener('click', function() {
+                var navLinks = document.getElementById('nav-links');
+                if (navLinks.classList.contains('nav-links'))
+                    navLinks.className = 'nav-links_opened';
+                else {
+                    navLinks.className = 'nav-links';
+                }
+            });
+        </script>
     </body>
 </html>
