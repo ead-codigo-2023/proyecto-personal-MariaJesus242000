@@ -1,0 +1,49 @@
+.header {
+    margin-top: -40px;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.header img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.services .text_container {
+    width: 80%;
+}
+
+
+
+.services {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--homeSectionPadding);
+}
+
+.services .text_container {
+    width: 80%;
+}
+
+.services .green_title {
+    color: var(--titleGreen);
+    font-size: 2rem;
+    min-width: 100%;
+    text-align: left;    
+}
+
+.text_right {
+    padding-left: 10rem;
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.picture-card_container {
+    width: 100%;
+    padding: var(--homeSectionPadding);
+    position: relative;
+}

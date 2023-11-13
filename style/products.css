@@ -1,0 +1,85 @@
+.header {
+    margin-top: -45px;
+}
+
+.header img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.content {
+    padding: 40px 20px;
+}
+
+.content .title h1 {
+    color: var(--titleGreen);
+}
+
+.content .title p {
+    padding-left: 20px;
+}
+
+.split_div {
+    padding: 60px 0;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.split_div div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.split_div div img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.split_div div a {
+    margin-top: 35px;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.split_div div a:hover {
+    color: var(--titleGreen);
+    animation: onHover 0.25s ease-out;
+}
+
+@keyframes onHover {
+    from {
+        color: black;
+    } to {
+        color: var(--titleGreen);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        margin-top: 0;
+    }
+
+    .content .title p {
+        padding-top: 20px;
+        text-align: justify;
+    }
+
+    .split_div {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .split_div div {
+        width: 100%;
+    }
+
+    .split_div div a {
+        margin: 0;
+        padding: 20px 10px;
+    }
+
+}
